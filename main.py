@@ -17,7 +17,7 @@ import base64
 def main():
     st.set_page_config(page_title="kangsinchat", page_icon="🏫")
     st.image('knowhow.png')
-    st.title("_:red[생활기록부기재요령 도우미]_ 🏫")
+    st.title("_:red[3단원 도우미]_ 🏫")
     st.header("😶주의!이 챗봇은 참고용으로 사용하세요!", divider='rainbow')
 
     if "conversation" not in st.session_state:
@@ -54,12 +54,12 @@ def main():
         clear_button = st.button("대화 내용 삭제", key="clear_button")
         if clear_button:
             st.session_state.chat_history = []
-            st.session_state.messages = [{"role": "assistant", "content": "생활기록부기재요령에 대해 물어보세요!😊"}]
+            st.session_state.messages = [{"role": "assistant", "content": "3단원에 대해 물어보세요!😊"}]
             st.experimental_rerun()  # 화면을 다시 로드하여 대화 내용을 초기화
 
     if 'messages' not in st.session_state:
         st.session_state['messages'] = [{"role": "assistant", 
-                                         "content": "생활기록부기재요령에 대해 물어보세요!😊"}]
+                                         "content": "3단원에 대해 물어보세요!😊"}]
 
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
